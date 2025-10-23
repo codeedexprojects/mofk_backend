@@ -47,6 +47,9 @@ const deliveryFeeRoutes = require('./Routes/Admin/DeliveryFee/deliveryFeeRoute')
 const MainSearchRoutes = require('./Routes/User/Main Search/SearchRoutes');
 const walk_inCoupon=require('./Routes/User/Walk-inCoupon/Walk-inRoute')
 const webhookRoutes = require("./Routes/User/razorpay_webhook/webhookRoute");
+require("./config/cartReminderJob");
+require("./config/wishlistReminderJob");
+
 
 const path = require('path')
 
