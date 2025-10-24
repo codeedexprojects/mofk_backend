@@ -1,4 +1,4 @@
-const Slider = require('../../../Models/Admin/SliderModel');
+const Slider = require('../../../Models/Admin/CarouselModel');
 const fs = require('fs');
 
 // Create new slider

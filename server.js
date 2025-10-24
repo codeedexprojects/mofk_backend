@@ -47,6 +47,8 @@ const deliveryFeeRoutes = require('./Routes/Admin/DeliveryFee/deliveryFeeRoute')
 const MainSearchRoutes = require('./Routes/User/Main Search/SearchRoutes');
 const walk_inCoupon=require('./Routes/User/Walk-inCoupon/Walk-inRoute')
 const webhookRoutes = require("./Routes/User/razorpay_webhook/webhookRoute");
+const adminCarouselRoutes = require("./Routes/Admin/Slider/carouselRoute")
+const userCarouselRoutes = require("./Routes/User/Slider/carouselRoute")
 require("./config/cartReminderJob");
 require("./config/wishlistReminderJob");
 
@@ -79,6 +81,7 @@ app.use('/api/admin/sizechart',sizeChartRoutes)
 app.use('/api/admin/material',materialRoutes)
 app.use('/api/admin/specification',specificationRoutes)
 app.use('/api/admin/search',adminSearchRoutes)
+app.use('/api/admin/carousel',adminCarouselRoutes)
 
 
 
@@ -101,6 +104,7 @@ app.use('/api/walkin/coupon',walk_inCoupon)
 app.use("/api/webhook/razorpay", express.raw({ type: "application/json" }));
 app.use('/api/webhook/razorpay', webhookRoutes);
 app.use('/api/user/coupon',userCouponRoutes)
+app.use('/api/user/carousel',userCarouselRoutes)
 
 
 // test
