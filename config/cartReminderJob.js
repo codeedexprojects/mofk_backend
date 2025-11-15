@@ -1,10 +1,8 @@
-// jobs/cartReminderJob.js
 const cron = require("node-cron");
 const Cart = require("../Models/User/CartModel");
 const User = require("../Models/User/UserModel");
 const { sendCartReminderEmail } = require("../config/emailService");
 
-// Schedule daily job (midnight)
 cron.schedule("0 0 * * *", async () => {
   console.log("Running daily cart reminder job...");
 

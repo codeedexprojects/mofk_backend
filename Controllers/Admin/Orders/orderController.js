@@ -14,7 +14,7 @@ const sendOrderStatusEmail = async (order) => {
     const userEmail = order.userId.email;
     let actionType = "";
     let emailVariables = {
-      subject: "Order Status - Poky Store",
+      subject: "Order Status - Mofkin Clothing",
       orderId: order.orderId,
       customerName: order.userId.name || "Customer",
     };

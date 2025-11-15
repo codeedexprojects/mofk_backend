@@ -16,11 +16,11 @@ const sendEmail = (to, actionType, variables = {}) => {
   }
 
   const data = {
-    from: "Poky Store <no-reply@pokystore.in>",
+    from: "Mofkin Clothing <no-reply@mofkin.com>",
     to,
-    subject: variables.subject || "Poky Store Notification",
+    subject: variables.subject || "Mofkin Clothing Notification",
     template: templateName, // Mailgun template name
-    "h:X-Mailgun-Variables": JSON.stringify(variables), // Passing variables to the template
+    "h:X-Mailgun-Variables": JSON.stringify(variables), 
   };
 
   return new Promise((resolve, reject) => {

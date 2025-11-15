@@ -131,9 +131,6 @@ const createWishlistReminderEmail = (userEmail, userName, wishlistItems) => {
   };
 };
 
-//
-// 📨 Send reminder email functions
-//
 exports.sendCartReminderEmail = async (userEmail, userName, cartItems) => {
   try {
     const mailOptions = createCartReminderEmail(userEmail, userName, cartItems);
