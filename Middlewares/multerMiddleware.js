@@ -31,13 +31,14 @@ const upload = multer({
     if (
       file.mimetype === 'image/png' ||
       file.mimetype === 'image/jpg' ||
-      file.mimetype === 'image/jpeg'
+      file.mimetype === 'image/jpeg' ||
+      file.mimetype === 'image/webp'
     ) {
       callback(null, true);
     } else {
       callback(null, false);
       return callback(
-        new Error("Please upload images in the following formats: JPEG, PNG, JPG.")
+        new Error("Please upload images in the following formats: JPEG, PNG, JPG, WEBP.")
       );
     }
   },
